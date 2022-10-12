@@ -29,6 +29,7 @@ namespace XFMessagingCenterBug
                     {
                         try
                         {
+                            //Debug.Print($"Running Messaigng center operations on thread: {Thread.CurrentThread.ManagedThreadId}");
                             MessagingCenter.Subscribe<MainPage, string>(this, $"test{0}", (a, b) => { });
                             MessagingCenter.Unsubscribe<MainPage, string>(this, $"test{0}");
                         }
@@ -45,6 +46,7 @@ namespace XFMessagingCenterBug
                     {
                         try
                         {
+                            //Debug.Print($"Running Messaigng center operations on thread: {Thread.CurrentThread.ManagedThreadId}");
                             MessagingCenter.Subscribe<MainPage, string>(this, $"test{0}", (a, b) => { });
                             MessagingCenter.Unsubscribe<MainPage, string>(this, $"test{0}");
                         }
@@ -79,6 +81,7 @@ namespace XFMessagingCenterBug
                         {
                             semaphore.Wait();
 
+                            //Debug.Print($"Running Messaigng center operations on thread: {Thread.CurrentThread.ManagedThreadId}");
                             MessagingCenter.Subscribe<MainPage, string>(this, $"test{0}", (a, b) => { });
                             MessagingCenter.Unsubscribe<MainPage, string>(this, $"test{0}");
                         }
@@ -101,6 +104,7 @@ namespace XFMessagingCenterBug
                         {
                             semaphore.Wait();
 
+                            //Debug.Print($"Running Messaigng center operations on thread: {Thread.CurrentThread.ManagedThreadId}");
                             MessagingCenter.Subscribe<MainPage, string>(this, $"test{0}", (a, b) => { });
                             MessagingCenter.Unsubscribe<MainPage, string>(this, $"test{0}");
                         }
